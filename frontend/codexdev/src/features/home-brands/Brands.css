@@ -1,0 +1,98 @@
+/* src/components/layout/Brands/Brands.css */
+
+.brands-section {
+    padding: 60px 0;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.brands-title {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    opacity: 0.8;
+}
+
+.brands-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Flex row display with centered gap to match Figma spacing */
+.brands-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Pill-shaped Brand Card Container */
+.brand-card {
+    height: 58px;
+    /* Precise height for the pill shape */
+    width: 145px;
+    /* Perfect proportional width */
+    border-radius: 12px;
+    /* Smooth rounded corners as in Figma */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Takes care of internal image overflowing bounds */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.brand-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Image scaling to match full container cover like Figma */
+.brand-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Important: keeps backgrounds and logos fully visible */
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+    .brands-grid {
+        gap: 1.5rem;
+    }
+
+    .brand-card {
+        width: 125px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .brands-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        gap: 1.5rem;
+    }
+
+    .brand-card {
+        width: 100%;
+        max-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+}
