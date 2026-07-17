@@ -1,0 +1,160 @@
+.portfolio-section {
+    padding: 100px 0;
+    background-color: var(--bg-white);
+}
+
+/* Header Flex Layout */
+.portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4rem;
+    gap: 2rem;
+}
+
+.portfolio-header-left {
+    max-width: 600px;
+}
+
+.portfolio-main-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1e1b4b;
+    /* Deep Indigo / Dark Violet shade */
+    letter-spacing: -1.2px;
+    margin-bottom: 1.2rem;
+}
+
+.portfolio-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* Button Styling */
+.view-all-btn {
+    display: inline-block;
+    background-color: #0c082c;
+    /* Deep Dark Navy Blue */
+    color: #ffffff;
+    padding: 1rem 2.2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.view-all-btn:hover {
+    background-color: #1e1b4b;
+    transform: translateY(-2px);
+}
+
+/* Portfolio 3x2 Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Project Card & Hover zoom effects */
+.portfolio-card {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease;
+}
+
+.project-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+    /* Keeps all cards uniform in size */
+    background-color: #f3f4f6;
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Hover Zoom & Overlay */
+.portfolio-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 8, 44, 0.4);
+    /* Dark translucent overlay on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.view-project-text {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 1px solid #ffffff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover .view-project-text {
+    transform: translateY(0);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2.5rem;
+    }
+
+    .portfolio-header-right {
+        width: 100%;
+    }
+
+    .view-all-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .portfolio-main-title {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

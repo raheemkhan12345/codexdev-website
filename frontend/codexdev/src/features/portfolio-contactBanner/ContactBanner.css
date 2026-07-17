@@ -1,0 +1,129 @@
+/* src/features/portfolio-grid/PortfolioCTA.css */
+
+.portfolio-cta-section {
+    padding: 0 1.5rem 100px 1.5rem;
+    /* Sides padding to prevent edge touching on mobile */
+    background-color: #faf9f9;
+    /* Matches your portfolio background */
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-cta-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.portfolio-cta-card {
+    background: linear-gradient(135deg, #3b3a63 0%, #2e2d53 100%);
+    /* Exact rich deep purple tone */
+    border-radius: 36px;
+    /* Smooth extra-rounded corners as seen in the image */
+    padding: 5.5rem 2.5rem;
+    /* Generous vertical padding for that premium spacious feel */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 50px rgba(59, 58, 99, 0.12);
+}
+
+.cta-title {
+    color: #ffffff;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 1.2rem 0;
+    letter-spacing: -0.8px;
+    line-height: 1.15;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.cta-subtitle {
+    color: rgba(255, 255, 255, 0.82);
+    /* Subtle light opacity white for readability */
+    font-size: 1.15rem;
+    font-weight: 400;
+    max-width: 650px;
+    /* Limits width so text wraps beautifully like the image */
+    margin: 0 0 3rem 0;
+    line-height: 1.6;
+    letter-spacing: -0.1px;
+}
+
+/* ================= BUTTONS GROUP ================= */
+.cta-buttons-group {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cta-btn {
+    padding: 1.05rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 14px;
+    /* Clean rectangular-curved design as in image */
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* White solid button */
+.cta-btn.btn-primary {
+    background-color: #ffffff;
+    color: #1c1a3b;
+    /* Dark text for contrast */
+    border: 1.5px solid #ffffff;
+}
+
+.cta-btn.btn-primary:hover {
+    background-color: #f4f4f6;
+    border-color: #f4f4f6;
+    transform: translateY(-2px);
+}
+
+/* Outlined transparent button */
+.cta-btn.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    /* Subtle border matching image */
+}
+
+.cta-btn.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 768px) {
+    .portfolio-cta-card {
+        padding: 4rem 1.8rem;
+        border-radius: 28px;
+    }
+
+    .cta-title {
+        font-size: 2.2rem;
+    }
+
+    .cta-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 2.2rem;
+    }
+
+    .cta-buttons-group {
+        flex-direction: column;
+        /* Buttons stack nicely on small screens */
+        gap: 0.9rem;
+    }
+
+    .cta-btn {
+        width: 100%;
+        /* Full width on mobile for easy tapping */
+        max-width: 320px;
+    }
+}

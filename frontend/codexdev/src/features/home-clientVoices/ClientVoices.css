@@ -1,0 +1,102 @@
+.cta-section {
+  padding: 40px 0 100px 0;
+  background-color: var(--bg-white);
+}
+
+/* Rounded Dark Banner Box */
+.cta-container-box {
+  background-color: #0d0e2c; /* Deep Dark Navy Blue */
+  border-radius: 32px;
+  padding: 5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(13, 14, 44, 0.1);
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1px;
+  max-width: 750px;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.cta-subtitle {
+  font-size: 1.05rem;
+  color: #94a3b8; /* Cool grayish-blue text */
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+/* Buttons Container */
+.cta-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* Filled white button */
+.cta-btn-primary {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #0d0e2c;
+  padding: 1rem 2.2rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s;
+}
+
+.cta-btn-primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Outline button */
+.cta-btn-secondary {
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1rem 2.2rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.cta-btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cta-container-box {
+    padding: 4rem 1.5rem;
+    border-radius: 24px;
+  }
+  .cta-title {
+    font-size: 2rem;
+  }
+  .cta-buttons-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cta-btn-primary,
+  .cta-btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
