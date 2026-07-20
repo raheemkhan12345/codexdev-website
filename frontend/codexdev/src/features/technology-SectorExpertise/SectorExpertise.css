@@ -1,0 +1,184 @@
+/* src/features/technologies/SectorExpertise.css */
+
+.sector-expertise-section {
+    background-color: #f6f5f9;
+    /* Muted off-white background matching the image layout */
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sector-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ================= HEADER STYLING ================= */
+.sector-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.sector-main-title {
+    color: #0f172a;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    margin: 0 0 1rem 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.sector-main-subtitle {
+    color: #64748b;
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* ================= CARDS GRID ================= */
+.sector-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 perfectly sized columns */
+    gap: 2.5rem;
+}
+
+.sector-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    /* Smooth rounded corners matching your premium theme */
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.015);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.sector-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+}
+
+/* ================= IMAGE & BADGE AREA ================= */
+.sector-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    /* Golden aspect ratio height for dashboards screenshots */
+    background-color: #0f172a;
+    /* Dark base fill if image fails to load */
+    overflow: hidden;
+}
+
+.project-display-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.sector-card:hover .project-display-img {
+    transform: scale(1.03);
+    /* Soft elegant zoom effect on card hover */
+}
+
+/* Top Left Overlay Badge */
+.project-badge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background-color: rgba(59, 58, 99, 0.75);
+    /* Deep purple glassmorphism matching active state colors */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    padding: 0.5rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    z-index: 3;
+    letter-spacing: 0.2px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ================= CARD BODY CONTENT ================= */
+.sector-card-content {
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-title {
+    color: #1e293b;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0 0 1.2rem 0;
+    letter-spacing: -0.5px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.project-description {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 2.5rem 0;
+    flex-grow: 1;
+    /* Keeps footer tags aligned even if description height varies */
+}
+
+/* ================= TECH STACK TAGS ================= */
+.project-tags-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.tech-tag {
+    background-color: #eeedf7;
+    /* Soft aesthetic lavender tone from the mockup */
+    color: #4c4b7b;
+    /* Cohesive project theme tint */
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
+/* ================= RESPONSIVE LAYOUT ================= */
+@media (max-width: 1024px) {
+    .sector-grid {
+        grid-template-columns: 1fr;
+        /* 1 column stack on tablets and small screens */
+        gap: 2rem;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .sector-card-content {
+        padding: 2.5rem 2rem;
+    }
+
+    .sector-image-wrapper {
+        height: 280px;
+    }
+}
+
+@media (max-width: 640px) {
+    .sector-main-title {
+        font-size: 2.3rem;
+    }
+
+    .project-title {
+        font-size: 1.4rem;
+    }
+
+    .sector-image-wrapper {
+        height: 220px;
+    }
+}

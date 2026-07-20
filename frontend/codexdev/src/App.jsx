@@ -3,8 +3,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
 import Home from './pages/Home';
-// import ServicesPage from './pages/Services'; // Aapke friend ka banaya hua services page component
+import Portfolio from './pages/Portoflio'; // Import Portfolio page
 import './assets/styles/global.css'; // Global CSS 
+import Technologies from './pages/Technologies';
 
 function App() {
   return (
@@ -14,11 +15,11 @@ function App() {
           {/* Default Route: Home page load hoga */}
           <Route path="/" element={<Home />} />
 
-
           {/* <Route path="/services" element={<Services />} /> */}
 
-       
-          {/* <Route path="/portfolio" element={<PortfolioPage />} /> */}
+          <Route path="/portfolio" element={<Portfolio />} />
+
+          <Route path="/technologies" element={<Technologies />} />
         </Routes>
       </MainLayout>
     </Router>

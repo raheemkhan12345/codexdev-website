@@ -1,0 +1,145 @@
+/* ================= COMMON BASE STYLES ================= */
+.cta-section {
+  padding: 80px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Portfolio Page background tint if needed */
+.portfolio-cta-section {
+  background-color: #ffffff;
+}
+
+/* Tech Page background tint */
+.tech-cta-section {
+  background-color: #f6f5f9;
+}
+
+.cta-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.cta-card {
+  border-radius: 24px;
+  padding: 6rem 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+}
+
+/* Variant Colors (Dono ka dynamic theme color) */
+.portfolio-cta-card {
+  background-color: #292948;
+  /* Portfolio deep purple */
+}
+
+.tech-cta-card {
+  background-color: #21213a;
+  /* Tech slate-purple */
+}
+
+/* ================= TYPOGRAPHY ================= */
+.cta-title {
+  color: #ffffff;
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+  max-width: 820px;
+  margin: 0 0 1.5rem 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.cta-subtitle {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 580px;
+  margin: 0 0 3rem 0;
+}
+
+/* ================= BUTTONS STYLING ================= */
+.cta-buttons-group {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-btn {
+  padding: 1rem 2.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Primary Solid Button */
+.cta-btn.btn-primary {
+  background-color: #6a6994;
+  color: #ffffff;
+  border: 1.5px solid #6a6994;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-btn.btn-primary:hover {
+  background-color: #7877a5;
+  border-color: #7877a5;
+  transform: translateY(-2px);
+}
+
+/* Secondary Outline Button */
+.cta-btn.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.cta-btn.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 1024px) {
+  .cta-card {
+    padding: 5rem 3rem;
+  }
+
+  .cta-title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cta-card {
+    padding: 4rem 1.5rem;
+    border-radius: 18px;
+  }
+
+  .cta-title {
+    font-size: 1.85rem;
+    letter-spacing: -0.5px;
+  }
+
+  .cta-buttons-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
