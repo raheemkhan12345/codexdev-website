@@ -1,0 +1,106 @@
+/* src/components/TechPartners.css */
+
+.tech-partners-section {
+    background-color: #dddcde;
+    /* Matching soft light background */
+    padding: 60px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.partners-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+}
+
+/* Uppercase Muted Caption */
+.partners-subtitle {
+    color: #696a6b;
+    font-size: 0.825rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Logos Wrapper Row */
+.partners-logos-grid {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+/* Individual Brand Item */
+.partner-logo-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #8f9397;
+    /* Muted slate gray matching image branding */
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: default;
+}
+
+.partner-logo-item:hover {
+    color: #55547e;
+    /* Accent purple highlight on hover */
+    transform: translateY(-2px);
+}
+
+.partner-icon {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.partner-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ================= RESPONSIVE LAYOUT ================= */
+@media (max-width: 1024px) {
+    .partners-logos-grid {
+        justify-content: center;
+        gap: 3rem 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .tech-partners-section {
+        padding: 45px 0;
+    }
+
+    .partners-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .partners-logos-grid {
+        gap: 2rem 1.5rem;
+    }
+
+    .partner-name {
+        font-size: 1.3rem;
+    }
+
+    .partner-icon {
+        font-size: 1.4rem;
+    }
+}

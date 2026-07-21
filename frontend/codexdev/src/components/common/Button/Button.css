@@ -24,13 +24,19 @@
 }
 
 /* Secondary (Outline) Button Style */
+/* Secondary Button */
 .btn-secondary {
-  background-color: transparent;
-  color: var(--text-dark);
-  border: 1px solid var(--border-color);
+    background: #838080;
+    color: #6b7280 !important;   /* Gray Text */
+    border: 1.5px solid #d1d5db !important;
+    transition: all 0.3s ease;
+         box-shadow: 0 10px 20px rgba(138, 138, 139, 0.25);
+
 }
 
 .btn-secondary:hover {
-  background-color: var(--badge-bg);
-  border-color: var(--text-dark);
+    background: #636367;        
+     box-shadow: 0 10px 20px rgba(138, 138, 139, 0.25);
+    background-color: #23254d;
+  border-color: #23254d;
 }

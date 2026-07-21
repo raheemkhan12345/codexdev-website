@@ -1,19 +1,11 @@
-/* ================= COMMON BASE STYLES ================= */
+/* src/components/ContactBanner.css */
+
 .cta-section {
   padding: 80px 0;
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-/* Portfolio Page background tint if needed */
-.portfolio-cta-section {
-  background-color: #ffffff;
-}
-
-/* Tech Page background tint */
-.tech-cta-section {
-  background-color: #f6f5f9;
+  background-color: #f7f6f9;
 }
 
 .cta-container {
@@ -34,38 +26,42 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
 }
 
-/* Variant Colors (Dono ka dynamic theme color) */
+/* ================= VARIANTS COLOR THEMES ================= */
+.about-cta-card {
+  background-color: #6a6c98;
+  /* Soft slate purple matching design */
+}
+
 .portfolio-cta-card {
-  background-color: #292948;
-  /* Portfolio deep purple */
+  background-color: #4c4b7b;
 }
 
 .tech-cta-card {
-  background-color: #21213a;
-  /* Tech slate-purple */
+  background-color: #55547e;
 }
 
 /* ================= TYPOGRAPHY ================= */
 .cta-title {
   color: #ffffff;
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -0.8px;
+  line-height: 1.2;
+  letter-spacing: -1px;
   max-width: 820px;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.2rem 0;
   font-family: system-ui, -apple-system, sans-serif;
 }
 
 .cta-subtitle {
-  color: #cbd5e1;
+  color: #e2e8f0;
   font-size: 1.1rem;
   line-height: 1.6;
-  max-width: 580px;
-  margin: 0 0 3rem 0;
+  max-width: 600px;
+  margin: 0 0 2.5rem 0;
+  font-weight: 400;
 }
 
-/* ================= BUTTONS STYLING ================= */
+/* ================= BUTTONS BASE LAYOUT ================= */
 .cta-buttons-group {
   display: flex;
   gap: 1.2rem;
@@ -73,57 +69,84 @@
   align-items: center;
 }
 
+/* Common Base Style for ALL Buttons */
 .cta-btn {
-  padding: 1rem 2.2rem;
+  padding: 0.95rem 2.4rem;
   font-size: 0.95rem;
   font-weight: 600;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1.5px solid transparent;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   font-family: system-ui, -apple-system, sans-serif;
 }
 
-/* Primary Solid Button */
-.cta-btn.btn-primary {
-  background-color: #6a6994;
+/* ================= DEFAULT BUTTON VARIANTS ================= */
+
+/* Primary Button (Standard Theme Solid) */
+.btn-primary {
+  background-color: #4c4b7b;
   color: #ffffff;
-  border: 1.5px solid #6a6994;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-color: #4c4b7b;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.cta-btn.btn-primary:hover {
-  background-color: #7877a5;
-  border-color: #7877a5;
+.btn-primary:hover {
+  background-color: #3b3a62;
+  border-color: #3b3a62;
   transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Secondary Outline Button */
-.cta-btn.btn-secondary {
+/* Secondary Button (Outline Style) */
+.btn-secondary {
   background-color: transparent;
   color: #ffffff;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
-.cta-btn.btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
   border-color: #ffffff;
   transform: translateY(-2px);
+}
+
+/* ================= OVERRIDES FOR ABOUT VARIANT ================= */
+
+/* White Solid Button inside About Page Banner */
+.about-cta-card .btn-primary {
+  background-color: #ffffff;
+  color: #4c4b7b;
+  border-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-cta-card .btn-primary:hover {
+  background-color: #f8fafc;
+  color: #3b3a62;
+  border-color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* ================= RESPONSIVE DESIGN ================= */
 @media (max-width: 1024px) {
   .cta-card {
-    padding: 5rem 3rem;
+    padding: 5rem 2.5rem;
   }
 
   .cta-title {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
   }
 }
 
 @media (max-width: 640px) {
   .cta-card {
-    padding: 4rem 1.5rem;
+    padding: 3.5rem 1.5rem;
     border-radius: 18px;
   }
 
@@ -133,9 +156,8 @@
   }
 
   .cta-buttons-group {
-    flex-direction: column;
     width: 100%;
-    gap: 1rem;
+    flex-direction: column;
   }
 
   .cta-btn {

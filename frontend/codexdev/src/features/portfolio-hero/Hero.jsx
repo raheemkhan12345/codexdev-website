@@ -55,7 +55,7 @@ const Hero = () => {
                         </div>
 
                         {/* Action Button */}
-                        <Link to="#/portfolio/supply-chain" className="read-case-study-btn">
+                        <Link to="/portfolio" className="read-case-study-btn">
                             <span>Read Full Case Study</span>
                             <FiArrowRight className="arrow-icon" />
                         </Link>

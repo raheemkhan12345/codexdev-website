@@ -6,6 +6,7 @@ import { heroData } from './heroData';
 import './Hero.css';
 
 import dashboardImg from '../../assets/images/hero-dashboard.jpg';
+import { FaCheck } from 'react-icons/fa';
 
 const Hero = () => {
     return (
@@ -18,7 +19,7 @@ const Hero = () => {
                     <div className="hero-content">
                         {/* Badge */}
                         <div className="hero-badge">
-                            <span className="badge-icon">✓</span>
+                            <span className="badge-icon"><FaCheck /></span>
                             {heroData.badge}
                         </div>
 
