@@ -6,13 +6,15 @@ import Home from './pages/Home';
 import Portfolio from './pages/Portoflio'; // Import Portfolio page
 import './assets/styles/global.css'; // Global CSS 
 import Technologies from './pages/Technologies';
+import About from './pages/About';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
     <Router>
       <MainLayout>
         <Routes>
-          {/* Default Route: Home page load hoga */}
+          {/* Default Route */}
           <Route path="/" element={<Home />} />
 
           {/* <Route path="/services" element={<Services />} /> */}
@@ -20,6 +22,10 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
 
           <Route path="/technologies" element={<Technologies />} />
+
+          <Route path="/about" element={<About />} />
+
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </MainLayout>
     </Router>

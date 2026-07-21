@@ -1,0 +1,222 @@
+.contact-form-section {
+    width: 100%;
+    background-color: #f6f5fa;
+    /* Light soft gray-purple section background */
+    padding: 40px 2rem 80px 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Card Container */
+.contact-form-card {
+    max-width: 1024px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 3.5rem 3.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+/* Header Text */
+.form-header {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 0.6rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #1e293b;
+
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.form-subtitle {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin: 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #cbd5e1;
+
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    line-height: 1.6;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Form Layout Grid */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+/* Labels with Underline styling */
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.6rem;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 1px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Inputs & Textarea */
+.form-group input,
+.form-group textarea,
+.select-wrapper select {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
+    font-size: 0.95rem;
+    color: #334155;
+    background-color: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.2s ease;
+    font-family: system-ui, -apple-system, sans-serif;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.select-wrapper select:focus {
+    border-color: #5b5a8e;
+    box-shadow: 0 0 0 3px rgba(91, 90, 142, 0.1);
+}
+
+/* Select Dropdown Styling */
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.select-wrapper select {
+    appearance: none;
+    cursor: pointer;
+    padding-right: 2.5rem;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: #64748b;
+    pointer-events: none;
+}
+
+/* Drag and Drop Zone */
+.file-drop-zone {
+    width: 100%;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+.file-drop-zone:hover {
+    border-color: #5b5a8e;
+}
+
+.file-input-hidden {
+    display: none;
+}
+
+.file-drop-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cloud-icon-wrapper {
+    font-size: 2.2rem;
+    color: #5b5a8e;
+    margin-bottom: 0.6rem;
+}
+
+.drop-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #475569;
+    border-bottom: 1px solid #475569;
+    padding-bottom: 1px;
+}
+
+/* Submit Button */
+.btn-submit-message {
+    width: 100%;
+    background-color: #505278;
+    /* Slate purple matching screenshot button */
+    color: #ffffff;
+    border: none;
+    padding: 1.1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.btn-submit-message:hover {
+    background-color: #3f4061;
+    transform: translateY(-1px);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 768px) {
+    .contact-form-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .form-title {
+        font-size: 1.8rem;
+    }
+}

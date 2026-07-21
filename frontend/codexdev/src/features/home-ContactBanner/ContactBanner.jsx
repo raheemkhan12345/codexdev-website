@@ -5,8 +5,10 @@ const ContactBanner = ({
   title, 
   subtitle, 
   primaryBtnText, 
-  secondaryBtnText, 
-  variant = 'portfolio' // 'portfolio' ya 'tech' variant taake custom styling apply ho sake
+  secondaryBtnText = null, // Optional prop
+  onPrimaryClick,
+  onSecondaryClick,
+  variant = 'about' // 'about', 'portfolio', or 'tech'
 }) => {
   return (
     <section className={`cta-section ${variant}-cta-section`}>
@@ -16,8 +18,17 @@ const ContactBanner = ({
           <p className="cta-subtitle">{subtitle}</p>
           
           <div className="cta-buttons-group">
-            <button className="cta-btn btn-primary">{primaryBtnText}</button>
-            <button className="cta-btn btn-secondary">{secondaryBtnText}</button>
+            {primaryBtnText && (
+              <button className="cta-btn btn-primary" onClick={onPrimaryClick}>
+                {primaryBtnText}
+              </button>
+            )}
+            
+            {secondaryBtnText && (
+              <button className="cta-btn btn-secondary" onClick={onSecondaryClick}>
+                {secondaryBtnText}
+              </button>
+            )}
           </div>
         </div>
       </div>

@@ -1,0 +1,172 @@
+/* src/components/TeamShowcase.css */
+
+.team-showcase-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.team-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ================= HEADER & FILTER TABS ================= */
+.team-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3.5rem;
+    gap: 2rem;
+}
+
+.team-header-left {
+    max-width: 600px;
+}
+
+.team-title {
+    color: #0f172a;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    margin: 0 0 0.8rem 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.team-subtitle {
+    color: #64748b;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+/* Pill Navigation Bar */
+.team-filter-pill {
+    background-color: #eeedf3;
+    padding: 0.35rem;
+    border-radius: 100px;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    color: #64748b;
+    padding: 0.55rem 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.filter-btn:hover {
+    color: #1e293b;
+}
+
+.filter-btn.active {
+    background-color: #55547e;
+    /* Accent purple active tab */
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(85, 84, 126, 0.2);
+}
+
+/* ================= CARDS GRID ================= */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+}
+
+.team-image-wrapper {
+    width: 100%;
+    height: 340px;
+    /* Golden aspect ratio for portrait photos */
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
+.member-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .member-photo {
+    transform: scale(1.03);
+}
+
+/* Info Text Below Image */
+.team-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.member-name {
+    color: #0f172a;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.member-role {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* ================= RESPONSIVE LAYOUT ================= */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .team-header-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 640px) {
+    .team-title {
+        font-size: 2.2rem;
+    }
+
+    .team-filter-pill {
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-image-wrapper {
+        height: 380px;
+    }
+}
