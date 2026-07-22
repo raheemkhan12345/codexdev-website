@@ -1,0 +1,164 @@
+/* src/features/services/UiUxService.css */
+
+/* Overall Section Container */
+.service-section {
+  width: 100%;
+  min-height: 100vh;
+  
+  background-color: #F6F2F6; /* Match the light off-white background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  font-family: 'Inter', sans-serif; /* Inter Font mandatory for this design */
+  -webkit-font-smoothing: antialiased;
+  margin-top: -100px;
+}
+
+/* Internal Container */
+.service-container {
+  max-width: 1280px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr; /* Stack vertically on small screens */
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Tablet and Desktop Layout: Split Column */
+@media (min-width: 1024px) {
+  .service-container {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+/* --- Left Column: Content Styling --- */
+.service-description {
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Top Square Icon */
+.service-main-icon {
+  width: 56px;
+  height: 56px;
+  background-color: #1A1C3B; /* Dark indigo background of the icon square */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Service Title Heading */
+.service-title {
+  font-size: 3rem;
+  font-weight: 700; /* Extra Bold */
+  color: #1A1C3B;
+ 
+  letter-spacing: -0.96px;
+  line-height: 57.6px;
+  font-style: Bold;
+  size: 48px;
+ 
+}
+
+.service-intro {
+  font-size: 18px;
+  color: #47464E;
+  line-height: 1.5;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  
+  max-width: 40ch; /* Reduced width to break into 3 lines */
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* --- Checklist Styling --- */
+.service-checklist {
+  list-style: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.service-check-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #334155; /* Slate 700 gray */
+}
+
+/* Solid Checkmark Icon */
+.check-icon {
+  width: 20px;
+  height: 20px;
+  color: #1A1C3B; /* Dark indigo matches the design */
+}
+
+/* --- Tech Stack Styling --- */
+.service-tech-stack {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  color: #FFFFFF;
+}
+
+.tech-stack-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #5D5D6D; /* Slate 400 */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Custom Tag Button Style */
+.tech-tag {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1C1B1E;
+  background-color: #FFFFFF;
+  border: 2px solid #C8C5CF;
+  font-family: 'Plus Jakarta Sans', sans-serif; /* Lighter slate gray for the thin border */
+  border-radius: 8px; /* Slightly rounded, clean tag corners */
+  cursor: default;
+  transition: all 150ms ease-in-out;
+}
+
+.tech-tag:hover {
+  background-color: #F1F5F9; /* Light slate hover effect */
+  border-color: #94A3B8;
+}
+
+/* --- Right Column: Image Styling --- */
+.service-mockup-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.service-mockup-img {
+  width: 100%;
+  max-width: 600px; /* Limits phone image growth on very large screens */
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px; /* Optional slight rounded corners on the wrapper itself */
+}
