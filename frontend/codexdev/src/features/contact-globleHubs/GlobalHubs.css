@@ -1,302 +1,188 @@
-/* src/components/GlobalHubs.css */
 
-.global-hubs-section {
-    width: 100%;
-    background-color: #f6f5fa;
-    padding: 60px 2rem 100px 2rem;
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Modern, clean font */
+    background-color: var(--bg-color);
+    margin: 0;
     display: flex;
     justify-content: center;
-}
-
-.global-hubs-container {
-    max-width: 1180px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }
 
-/* Header Text */
-.hubs-header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.hubs-title {
-    font-size: 2.3rem;
-    font-weight: 700;
-    color: #1e293b;
-    margin: 0 0 0.8rem 0;
-    border-bottom: 2px solid #1e293b;
-    padding-bottom: 4px;
-    display: inline-block;
-    font-family: system-ui, -apple-system, sans-serif;
-}
-
-.hubs-subtitle {
-    font-size: 0.95rem;
-    color: #64748b;
-    margin: 0;
-    border-bottom: 1px solid #cbd5e1;
-    padding-bottom: 3px;
-    display: inline-block;
-    font-family: system-ui, -apple-system, sans-serif;
-}
-
-/* Main Outer Card */
-.hubs-map-card {
+.map-page-container {
     width: 100%;
-    background-color: #ffffff;
-    border-radius: 28px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    max-width: 1200px;
+    padding: 40px;
     box-sizing: border-box;
 }
 
-/* Top Banner Header */
-.map-banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    margin-bottom: 1.5rem;
+.text-section {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.banner-globe-icon {
-    color: #3b82f6;
-    font-size: 1.1rem;
-}
-
-.banner-text {
-    font-size: 0.95rem;
+.main-title {
+    font-size: 42px;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #0f172a;
-    text-transform: uppercase;
-    border-bottom: 1px solid #0f172a;
-    padding-bottom: 1px;
-    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-/* Map Viewport Area */
-.map-viewport {
-    position: relative;
-    width: 100%;
-    height: 380px;
-    background-color: #f8fafc;
+.subtitle {
+    font-size: 18px;
+    color: #666;
+    text-decoration: underline;
+    text-decoration-color: rgba(102, 102, 102, 0.5);
+    text-underline-offset: 4px;
+}
+
+.contact-card-frame {
     border-radius: 20px;
-    border: 1px solid #f1f5f9;
-    background-image:
-        radial-gradient(#cbd5e1 1px, transparent 1px);
-    background-size: 24px 24px;
+    padding: 30px;
+    position: relative;
     overflow: hidden;
 }
 
-.map-graphic-overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(248, 250, 252, 0.85) 100%);
+.contact-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    color: var(--text-dark);
 }
 
-/* Map Pin Styling with Pulsing Glow */
-.map-pin {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    z-index: 5;
+.header-info {
+    margin-bottom: 30px;
 }
 
-.map-pin .dot {
-    width: 10px;
-    height: 10px;
-    background-color: #3b82f6;
-    border-radius: 50%;
+.breadcrumb {
+    font-size: 14px;
+    color: #888;
     display: block;
-    box-shadow: 0 0 10px #3b82f6;
+    margin-bottom: 10px;
 }
 
-.map-pin .ping {
+.header-info h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.map-display {
+    width: 100%;
+    height: 450px;
+    /* Adjust as needed */
+    background: url('../../assets/images/globalHubs-map.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.map-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 18px;
+    position: relative;
+}
+
+.location-dot {
     position: absolute;
-    top: -3px;
-    left: -3px;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background-color: rgba(59, 130, 246, 0.4);
-    animation: pulse-ring 2s infinite ease-out;
+    cursor: pointer;
 }
 
-.map-pin.active .dot {
-    background-color: #2563eb;
-    transform: scale(1.3);
-    box-shadow: 0 0 15px #2563eb;
-}
-
-.pin-tooltip {
+.dot-ripple {
     position: absolute;
-    top: -24px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #0f172a;
-    color: #ffffff;
-    font-size: 0.72rem;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 4px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #8dbfff;
+    /* Light blue ripple */
+    animation: ripple 1.5s infinite;
+    opacity: 0.7;
 }
 
-.map-pin:hover .pin-tooltip,
-.map-pin.active .pin-tooltip {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-2px);
-}
-
-@keyframes pulse-ring {
+@keyframes ripple {
     0% {
-        transform: scale(0.8);
-        opacity: 0.8;
+        transform: scale(1);
+        opacity: 0.7;
     }
 
     100% {
-        transform: scale(2.2);
+        transform: scale(2.5);
         opacity: 0;
     }
 }
 
-/* Bottom Overlay Hub Cards & Button */
-.hubs-bottom-overlay {
-    display: flex;
+.dot-label {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.location-dot:hover .dot-label {
+    opacity: 1;
+    transform: translateX(-50%) translateY(5px);
+}
+
+.locations-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 20px;
     align-items: center;
-    justify-content: space-between;
-    gap: 1.2rem;
-    margin-top: 1.8rem;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
 }
 
-.hub-cards-grid {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    flex: 1;
+.hub-info-block h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 5px;
 }
 
-.hub-info-card {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 14px;
-    padding: 0.9rem 1.4rem;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    min-width: 200px;
+.hub-info-block p {
+    font-size: 14px;
+    color: #666;
 }
 
-.hub-info-card:hover,
-.hub-info-card.selected {
-    background-color: #ffffff;
-    border-color: #3b82f6;
-    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.08);
-    transform: translateY(-2px);
-}
-
-.hub-card-top {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.3rem;
-}
-
-.hub-icon {
-    color: #3b82f6;
-    font-size: 0.85rem;
-}
-
-.hub-city {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin: 0;
-    border-bottom: 1px solid #0f172a;
-    padding-bottom: 1px;
-    font-family: system-ui, -apple-system, sans-serif;
-}
-
-.hub-role {
-    font-size: 0.8rem;
-    color: #64748b;
-    margin: 0;
-    border-bottom: 1px solid #cbd5e1;
-    padding-bottom: 1px;
-    font-family: system-ui, -apple-system, sans-serif;
-}
-
-/* Schedule Button */
-.btn-schedule-meeting {
-    background-color: #1e1b4b;
+.schedule-btn {
+    background-color: var(--primary-color);
     color: #ffffff;
     border: none;
-    padding: 1rem 1.8rem;
-    font-size: 0.92rem;
+    padding: 14px 28px;
+    font-size: 16px;
     font-weight: 600;
-    border-radius: 14px;
+    border-radius: 8px;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.7rem;
-    white-space: nowrap;
-    transition: all 0.25s ease;
-    box-shadow: 0 8px 20px rgba(30, 27, 75, 0.2);
-    font-family: system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s ease;
 }
 
-.btn-schedule-meeting:hover {
-    background-color: #2e2a72;
-    transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(30, 27, 75, 0.3);
-}
-
-.cta-arrow {
-    transition: transform 0.2s ease;
-}
-
-.btn-schedule-meeting:hover .cta-arrow {
-    transform: translateX(3px);
-}
-
-/* ================= RESPONSIVE DESIGN ================= */
-@media (max-width: 900px) {
-    .hubs-bottom-overlay {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .btn-schedule-meeting {
-        justify-content: center;
-        width: 100%;
-    }
-}
-
-@media (max-width: 640px) {
-    .hubs-map-card {
-        padding: 1.5rem;
-    }
-
-    .hubs-title {
-        font-size: 1.8rem;
-    }
-
-    .map-viewport {
-        height: 280px;
-    }
-
-    .hub-info-card {
-        width: 100%;
-    }
+.schedule-btn:hover {
+    background-color: #050a11;
 }

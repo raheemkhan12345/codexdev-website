@@ -1,137 +1,59 @@
-import React, { useState } from 'react';
+// React Code (GlobalHubs.js)
+import React from 'react';
 import './GlobalHubs.css';
-import {
-    FaGlobe,
-    FaMapMarkerAlt,
-    FaCalendarAlt,
-    FaArrowRight
-} from 'react-icons/fa';
+
+const hubLocations = [
+    { name: 'San Francisco', role: 'Global HQ', location: 'Tech District', mapX: '15%', mapY: '45%' },
+    { name: 'London', role: 'European Operations', location: 'West End', mapX: '51%', mapY: '39%' },
+    { name: 'Singapore', role: 'APAC Engineering Campus', location: 'Innovation Hub', mapX: '81%', mapY: '60%' },
+];
 
 const GlobalHubs = () => {
-    const [selectedHub, setSelectedHub] = useState('sf');
-
-    const hubLocations = [
-        {
-            id: 'sf',
-            city: 'San Francisco',
-            role: 'Global HQ • Tech District',
-        },
-        {
-            id: 'london',
-            city: 'London',
-            role: 'European Operations',
-        },
-        {
-            id: 'singapore',
-            city: 'Singapore',
-            role: 'APAC Engineering Campus',
-        },
-    ];
-
     return (
-        <section className="global-hubs-section">
-            <div className="global-hubs-container">
+        <div className="map-page-container">
+            <div className="text-section">
+                <h1 className="main-title">Global Engineering Hubs</h1>
+                <p className="subtitle">
+                    Wherever you are, CedexDev is there to provide round-the-clock innovation and support.
+                </p>
+            </div>
 
-                {/* Section Header */}
-                <div className="hubs-header">
-                    <h2 className="hubs-title">Global Engineering Hubs</h2>
-                    <p className="hubs-subtitle">
-                        Wherever you are, CodexDev is there to provide round-the-clock innovation and support.
-                    </p>
-                </div>
-
-                {/* Main Map Card Outer Container */}
-                <div className="hubs-map-card">
-
-                    {/* Card Top Title Banner */}
-                    <div className="map-banner">
-                        <FaGlobe className="banner-globe-icon" />
-                        <span className="banner-text">CONNECT GLOBALLY: BOOK A CONSULTATION</span>
+            <div className="contact-card-frame">
+                <div className="contact-card">
+                    <div className="header-info">
+                        <span className="breadcrumb">Contact Us | Book a Consultation</span>
+                        <h2>CONNECT GLOBALLY: BOOK A CONSULTATION</h2>
                     </div>
 
-                    {/* Map Display Box */}
-                    <div className="map-viewport">
-
-                        {/* World Map SVG Graphic */}
-                        <div className="map-graphic-overlay"></div>
-
-                        {/* Glowing Map Pins */}
-                        <div className={`map-pin pin-sf ${selectedHub === 'sf' ? 'active' : ''}`} style={{ top: '38%', left: '21%' }}>
-                            <span className="ping"></span>
-                            <span className="dot"></span>
-                            <span className="pin-tooltip">San Francisco</span>
-                        </div>
-
-                        <div className="map-pin pin-ny" style={{ top: '39%', left: '29%' }}>
-                            <span className="ping"></span>
-                            <span className="dot"></span>
-                            <span className="pin-tooltip">New York</span>
-                        </div>
-
-                        <div className={`map-pin pin-london ${selectedHub === 'london' ? 'active' : ''}`} style={{ top: '28%', left: '46%' }}>
-                            <span className="ping"></span>
-                            <span className="dot"></span>
-                            <span className="pin-tooltip">London</span>
-                        </div>
-
-                        <div className="map-pin pin-berlin" style={{ top: '27%', left: '50%' }}>
-                            <span className="ping"></span>
-                            <span className="dot"></span>
-                            <span className="pin-tooltip">Berlin</span>
-                        </div>
-
-                        <div className={`map-pin pin-singapore ${selectedHub === 'singapore' ? 'active' : ''}`} style={{ top: '60%', left: '76%' }}>
-                            <span className="ping"></span>
-                            <span className="dot"></span>
-                            <span className="pin-tooltip">Singapore</span>
-                        </div>
-
-                        <div className="map-pin pin-tokyo" style={{ top: '36%', left: '85%' }}>
-                            <span className="ping"></span>
-                            <span className="dot"></span>
-                            <span className="pin-tooltip">Tokyo</span>
-                        </div>
-
-                        <div className="map-pin pin-sydney" style={{ top: '75%', left: '88%' }}>
-                            <span className="ping"></span>
-                            <span className="dot"></span>
-                            <span className="pin-tooltip">Sydney</span>
-                        </div>
-
-                    </div>
-
-                    {/* Bottom Floating Hub Cards */}
-                    <div className="hubs-bottom-overlay">
-
-                        <div className="hub-cards-grid">
-                            {hubLocations.map((hub) => (
+                    <div className="map-display">
+                        {/* Replace with your specific SVG or Map Component */}
+                        <div className="map-placeholder">
+                            World Map Visualization
+                            {hubLocations.map((hub, index) => (
                                 <div
-                                    key={hub.id}
-                                    className={`hub-info-card ${selectedHub === hub.id ? 'selected' : ''}`}
-                                    onClick={() => setSelectedHub(hub.id)}
+                                    key={index}
+                                    className="location-dot"
+                                    style={{ left: hub.mapX, top: hub.mapY }}
                                 >
-                                    <div className="hub-card-top">
-                                        <FaMapMarkerAlt className="hub-icon" />
-                                        <h4 className="hub-city">{hub.city}</h4>
-                                    </div>
-                                    <p className="hub-role">{hub.role}</p>
+                                    <div className="dot-ripple"></div>
+                                    <div className="dot-label">{hub.name}</div>
                                 </div>
                             ))}
                         </div>
-
-                        {/* Schedule Meeting CTA Button */}
-                        <button className="btn-schedule-meeting">
-                            <FaCalendarAlt className="cta-icon" />
-                            <span>Schedule a Meeting</span>
-                            <FaArrowRight className="cta-arrow" />
-                        </button>
-
                     </div>
 
+                    <div className="locations-summary">
+                        {hubLocations.map((hub, index) => (
+                            <div key={index} className="hub-info-block">
+                                <h3>{hub.name}</h3>
+                                <p>{hub.role} • {hub.location}</p>
+                            </div>
+                        ))}
+                        <button className="schedule-btn">Schedule a Meeting</button>
+                    </div>
                 </div>
-
             </div>
-        </section>
+        </div>
     );
 };
 

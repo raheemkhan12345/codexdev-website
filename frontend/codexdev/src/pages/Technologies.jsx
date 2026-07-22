@@ -21,7 +21,7 @@ const Technologies = () => {
                 reality. Schedule a technical deep-dive today."
                 primaryBtnText="Get Started Now"
                 secondaryBtnText="View Our Portfolio"
-                variant="tech"
+                variant="about"
             />
         </>
     )

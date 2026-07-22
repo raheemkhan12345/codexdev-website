@@ -8,6 +8,7 @@ import './assets/styles/global.css'; // Global CSS
 import Technologies from './pages/Technologies';
 import About from './pages/About';
 import ContactUs from './pages/ContactUs';
+import Careers from './pages/Careers';
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
           <Route path="/technologies" element={<Technologies />} />
 
           <Route path="/about" element={<About />} />
+
+          <Route path="/careers" element={<Careers />} />
 
           <Route path="/contact" element={<ContactUs />} />
         </Routes>

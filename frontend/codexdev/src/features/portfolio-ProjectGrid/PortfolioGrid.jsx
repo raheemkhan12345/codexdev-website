@@ -84,7 +84,7 @@ const PortfolioGrid = () => {
                     {categories.map((cat) => (
                         <button
                             key={cat.id}
-                            className={`filter-btn ${activeFilter === cat.id ? 'active' : ''}`}
+                            className={`filter-button ${activeFilter === cat.id ? 'active' : ''}`}
                             onClick={() => setActiveFilter(cat.id)}
                         >
                             {cat.label}

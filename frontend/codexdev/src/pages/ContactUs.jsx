@@ -4,6 +4,7 @@ import ContactCards from '../features/contact-contactCards/ContactCards'
 import ContactForm from '../features/contact-contactForm/ContactForm'
 import ScheduleCall from '../features/contact-scheduleCall/scheduleCall'
 import GlobalHubs from '../features/contact-globleHubs/GlobalHubs'
+import CommonInquiries from '../features/contact-commonInquiries/CommonInquiries'
 
 const ContactUs = () => {
   return (
@@ -13,6 +14,7 @@ const ContactUs = () => {
     <ContactForm />
     <ScheduleCall />
     <GlobalHubs />
+    <CommonInquiries />
     </>
   )
 }

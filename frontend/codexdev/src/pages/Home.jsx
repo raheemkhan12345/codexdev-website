@@ -25,7 +25,7 @@ const Home = () => {
         conversation today."
         primaryBtnText="Schedule a Strategy Call"
         secondaryBtnText="Contact Sales"
-        variant="portfolio"
+        variant="about"
       />
     </>
   );

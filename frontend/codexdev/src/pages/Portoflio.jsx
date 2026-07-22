@@ -15,7 +15,7 @@ const Portoflio = () => {
         build something extraordinary."
         primaryBtnText="Start Your Project"
         secondaryBtnText="View Our Process"
-        variant="portfolio"
+        variant="about"
       />
     
     </>
