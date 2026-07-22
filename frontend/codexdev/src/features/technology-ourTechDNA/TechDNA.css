@@ -1,0 +1,130 @@
+.tech-dna-section {
+    background-color: #fbfbfc;
+    /* Clean premium off-white/light gray tone matching layout */
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tech-dna-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ================= HEADER STYLING ================= */
+.tech-dna-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 5rem auto;
+}
+
+.tech-dna-title {
+    color: #0f172a;
+    /* Slate 900 for dark prominent typography */
+    font-size: 2.75rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 1.2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.tech-dna-subtitle {
+    color: #64748b;
+    /* Balanced sub-text slate gray */
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ================= GRID & CARDS STYLING ================= */
+.tech-dna-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Exact 3 columns setup */
+    gap: 2rem;
+}
+
+.dna-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    /* Smooth rounded corners from image */
+    padding: 3rem 2.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+    /* Extremely soft elite shadow */
+    border: 1px solid rgba(0, 0, 0, 0.015);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Left aligned content */
+}
+
+.dna-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04);
+}
+
+/* Iconic square badge background */
+.dna-icon-wrapper {
+    background-color: #eeedf7;
+    /* Soft muted purple tint matching your theme */
+    color: #4c4b7b;
+    /* Premium accent brand color */
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+}
+
+.dna-card-title {
+    color: #1e293b;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.dna-card-description {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ================= RESPONSIVE LAYOUT ================= */
+@media (max-width: 1024px) {
+    .tech-dna-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for tablets */
+        gap: 1.5rem;
+    }
+
+    .tech-dna-title {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .tech-dna-grid {
+        grid-template-columns: 1fr;
+        /* Single column stack for mobile view */
+    }
+
+    .tech-dna-section {
+        padding: 60px 0;
+    }
+
+    .tech-dna-header {
+        margin-bottom: 3rem;
+    }
+
+    .dna-card {
+        padding: 2.5rem 2rem;
+    }
+}

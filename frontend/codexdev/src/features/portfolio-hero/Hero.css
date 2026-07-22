@@ -1,0 +1,198 @@
+.featured-project-section {
+    padding: 40px 2rem 80px;
+    background-color: #faf9f9;
+    /* Same soft off-white to match theme */
+}
+
+/* Master White Card Wrapper matching image rounded style */
+.featured-card-wrapper {
+    background-color: #ffffff;
+    border-radius: 32px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    /* Splitting image & content almost equally */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+    align-items: center;
+}
+
+/* Left Image Column */
+.featured-image-col {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    overflow: hidden;
+    display: flex;
+}
+
+.featured-mockup-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.featured-card-wrapper:hover .featured-mockup-img {
+    transform: scale(1.02);
+}
+
+/* Right Content Column */
+.featured-content-col {
+    padding: 4.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Badge Badges Styles */
+.featured-tags-row {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+}
+
+.badge-featured {
+    background-color: #ede9fe;
+    /* Soft lavender */
+    color: #6d28d9;
+    /* Deep violet text */
+}
+
+.badge-category {
+    background-color: #f1f5f9;
+    /* Cool grey background */
+    color: #475569;
+    /* Slate gray text */
+}
+
+/* Text Elements */
+.featured-project-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #1a153b;
+    /* Deep Indigo Vibe */
+    line-height: 1.15;
+    letter-spacing: -1.8px;
+    margin-bottom: 1.8rem;
+}
+
+.featured-project-desc {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #64748b;
+    /* Sleek grayish text */
+    margin-bottom: 2.2rem;
+    max-width: 480px;
+}
+
+/* Features Icons Row */
+.featured-icons-group {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-icon-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    border: 1.5px solid #e2e8f0;
+    color: #1a153b;
+    font-size: 1.35rem;
+    transition: all 0.2s;
+}
+
+.feature-icon-item:hover {
+    border-color: #1a153b;
+    background-color: #1a153b;
+    color: #ffffff;
+}
+
+/* Deep Purple Slate Button */
+.read-case-study-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: #404163;
+    /* Slate purple background matching the images */
+    color: #ffffff;
+    padding: 1.1rem 2.2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.read-case-study-btn:hover {
+    background-color: #2e2f4f;
+    transform: translateY(-2px);
+}
+
+.arrow-icon {
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.read-case-study-btn:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .featured-card-wrapper {
+        grid-template-columns: 1fr;
+        /* Stack layout on medium screens */
+    }
+
+    .featured-image-col {
+        min-height: 350px;
+    }
+
+    .featured-content-col {
+        padding: 3.5rem 2.5rem;
+    }
+
+    .featured-project-title {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .featured-image-col {
+        min-height: 250px;
+    }
+
+    .featured-content-col {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .featured-project-title {
+        font-size: 2.1rem;
+        letter-spacing: -1px;
+        margin-bottom: 1.2rem;
+    }
+
+    .featured-icons-group {
+        margin-bottom: 2rem;
+    }
+
+    .read-case-study-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,42 @@
+.btn {
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px; /* Smooth curved corners like in your image */
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+}
+
+/* Primary (Filled) Button Style */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #23254d; /* Slightly darker shade on hover */
+  border-color: #23254d;
+}
+
+/* Secondary (Outline) Button Style */
+/* Secondary Button */
+.btn-secondary {
+    background: #838080;
+    color: #3e3e3e !important;   /* Gray Text */
+    border: 1.5px solid #d1d5db !important;
+    transition: all 0.3s ease;
+         box-shadow: 0 10px 20px rgba(138, 138, 139, 0.25);
+
+}
+
+.btn-secondary:hover {
+    background: #636367;        
+     box-shadow: 0 10px 20px rgba(138, 138, 139, 0.25);
+    background-color: #23254d;
+  border-color: #23254d;
+}

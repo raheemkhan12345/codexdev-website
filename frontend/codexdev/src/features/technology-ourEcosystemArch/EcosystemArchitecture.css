@@ -1,0 +1,260 @@
+/* src/features/technologies/EcosystemArchitecture.css */
+
+.ecosystem-section {
+    background-color: #f7f6f9;
+    /* Soft minimal light layout background from image */
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.ecosystem-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    /* Content heavy left, orbits right */
+    gap: 5rem;
+    align-items: center;
+}
+
+/* ================= LEFT CONTENT STYLING ================= */
+.ecosystem-title {
+    color: #0f172a;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.ecosystem-subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 540px;
+    margin-bottom: 3rem;
+}
+
+.steps-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.step-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    transition: transform 0.25s ease;
+}
+
+.step-card:hover {
+    transform: translateX(6px);
+}
+
+.step-number {
+    background-color: #4c4b7b;
+    /* Balanced matching deep purple theme color */
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.step-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.step-card-title {
+    color: #1e293b;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.step-card-description {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ================= RIGHT ORBITAL DIAGRAM STYLING ================= */
+.ecosystem-graphics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.orbit-wrapper {
+    position: relative;
+    width: 420px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Perfect Circular Guides lines */
+.orbit-track {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(76, 75, 123, 0.08);
+    /* Clean thin purple track line */
+}
+
+.track-outer {
+    width: 100%;
+    height: 100%;
+}
+
+.track-inner {
+    width: 70%;
+    height: 70%;
+}
+
+/* Center Solid Purple Hub */
+.orbit-core {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: #4c4b7b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 35px rgba(76, 75, 123, 0.25);
+    z-index: 5;
+}
+
+.core-icon {
+    color: #ffffff;
+    font-size: 1.75rem;
+}
+
+/* Orbit Node Cards */
+.orbit-node {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    z-index: 4;
+    color: #4c4b7b;
+    transition: transform 0.3s ease;
+}
+
+.orbit-node:hover {
+    transform: scale(1.1);
+}
+
+.node-icon {
+    font-size: 1.25rem;
+}
+
+/* Exact Clock Cross Positions Matrix for Nodes */
+.node-top {
+    top: -27px;
+    left: calc(50% - 27px);
+}
+
+.node-right {
+    right: -27px;
+    top: calc(50% - 27px);
+}
+
+.node-bottom {
+    bottom: -27px;
+    left: calc(50% - 27px);
+}
+
+.node-left {
+    left: -27px;
+    top: calc(50% - 27px);
+}
+
+/* ================= RESPONSIVE LAYOUT ================= */
+@media (max-width: 1024px) {
+    .ecosystem-container {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .ecosystem-content {
+        order: 2;
+    }
+
+    .ecosystem-graphics {
+        order: 1;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .ecosystem-title {
+        font-size: 2.2rem;
+    }
+
+    .orbit-wrapper {
+        width: 300px;
+        height: 300px;
+    }
+
+    .orbit-core {
+        width: 75px;
+        height: 75px;
+    }
+
+    .core-icon {
+        font-size: 1.4rem;
+    }
+
+    .orbit-node {
+        width: 46px;
+        height: 46px;
+    }
+
+    .node-top {
+        top: -23px;
+        left: calc(50% - 23px);
+    }
+
+    .node-right {
+        right: -23px;
+        top: calc(50% - 23px);
+    }
+
+    .node-bottom {
+        bottom: -23px;
+        left: calc(50% - 23px);
+    }
+
+    .node-left {
+        left: -23px;
+        top: calc(50% - 23px);
+    }
+}

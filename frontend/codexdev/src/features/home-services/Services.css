@@ -1,0 +1,148 @@
+/* src/features/services/Services.css */
+
+.services-section {
+    padding: 100px 0;
+    /* Figma light lavender/off-white background */
+    background-color: var(--bg-white);
+}
+
+/* Header styling */
+.services-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 5rem auto;
+}
+
+.services-main-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    letter-spacing: -1.2px;
+    margin-bottom: 1.2rem;
+}
+
+.services-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+/* Services Grid (3 columns on Desktop, 1 on Mobile) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Service Card Container */
+.service-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon box with soft purple/tint background like Figma */
+.service-icon-box {
+    background-color: #ffffff;
+    /* Soft violet/purple background */
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+    transition: background-color 0.3s ease;
+}
+
+/* React Icons styles inside the box */
+.service-icon {
+    font-size: 1.4rem;
+    /* Icon size optimized */
+    color: #6366f1;
+    /* Figma elegant purple/indigo color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card hover par icon box thoda dark aur clear ho jaye */
+.service-card:hover .service-icon-box {
+    background-color: #e4e2f5;
+}
+
+.service-card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.service-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    /* Aligns read more buttons evenly */
+}
+
+/* Learn More Arrow CTA */
+.service-learn-more {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.service-learn-more .arrow {
+    transition: transform 0.2s ease;
+}
+
+/* Hover effects for link and arrow */
+.service-learn-more:hover {
+    color: #6366f1;
+    /* Figma indigo tone on hover */
+}
+
+.service-learn-more:hover .arrow {
+    transform: translateX(5px);
+    /* Smooth hover animation */
+}
+
+/* Responsive Media Queries */
+@media (max-width: 991px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-main-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .services-header {
+        margin-bottom: 3.5rem;
+    }
+}

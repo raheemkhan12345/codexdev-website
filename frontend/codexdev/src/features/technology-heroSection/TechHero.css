@@ -1,0 +1,237 @@
+/* src/features/technologies/TechHero.css */
+
+.tech-hero-section {
+    background-color: #0b0f19;
+    /* Exact premium deep dark gunmetal/navy tone */
+    background-image: radial-gradient(circle at 80% 20%, rgba(59, 58, 99, 0.15) 0%, transparent 50%);
+    padding: 40px 2rem 80px;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Subtle dot matrix background matrix effect from layout image */
+.tech-hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+.tech-hero-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    /* Content heavy left, graphic right */
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* ================= LEFT CONTENT STYLING ================= */
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    /* Icon aur text ke darmiyan spacing */
+    background-color: rgba(59, 58, 99, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #a5b4fc;
+    /* Soft indigo tint */
+    padding: 0.5rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    letter-spacing: 0.3px;
+}
+
+.badge-icon {
+    font-size: 0.9rem;
+    color: #ddb139;
+    
+}
+
+.tech-hero-title {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.2px;
+    margin: 0 0 1.5rem 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.tech-hero-description {
+    color: #94a3b8;
+    /* Balanced slate gray for clean readability */
+    font-size: 1.15rem;
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 0 0 3rem 0;
+}
+
+/* BUTTONS */
+.tech-hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+.tech-btn {
+    padding: 1.1rem 2.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Darker premium purple button matching project theme */
+.tech-btn.btn-filled {
+    background-color: #4c4b7b;
+    color: #ffffff;
+    border: 1.5px solid #4c4b7b;
+}
+
+.tech-btn.btn-filled:hover {
+    background-color: #3b3a63;
+    border-color: #3b3a63;
+    transform: translateY(-2px);
+}
+
+/* Contrast pure white button */
+.tech-btn.btn-white {
+    background-color: #ffffff;
+    color: #0f172a;
+    border: 1.5px solid #ffffff;
+}
+
+.tech-btn.btn-white:hover {
+    background-color: #f1f5f9;
+    border-color: #f1f5f9;
+    transform: translateY(-2px);
+}
+
+/* BOTTOM TRUST FEATURES */
+.tech-hero-features {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
+    gap: 1.2rem 3rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Feature Icons Styling from React Icons */
+.feature-icon {
+    font-size: 1.15rem;
+    color: #64748b;
+    /* Soft slate gray color matching image */
+}
+
+/* ================= RIGHT GRAPHIC BOX ================= */
+.tech-hero-graphics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.abstract-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    /* Controls image maximum size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-main-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Clean subtle floating animation for 3D sphere element */
+    animation: floatAnimation 6s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ================= RESPONSIVE LAYOUT ================= */
+@media (max-width: 1024px) {
+    .tech-hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .tech-hero-description {
+        margin: 0 auto 3rem auto;
+    }
+
+    .tech-hero-buttons {
+        justify-content: center;
+    }
+
+    .tech-hero-features {
+        justify-content: center;
+    }
+
+    .tech-hero-graphics {
+        order: -1;
+        /* Puts graphics on top for tablet view layout */
+        height: 250px;
+    }
+}
+
+@media (max-width: 640px) {
+    .tech-hero-title {
+        font-size: 2.4rem;
+    }
+
+    .tech-hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .tech-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .tech-hero-features {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
+    }
+}

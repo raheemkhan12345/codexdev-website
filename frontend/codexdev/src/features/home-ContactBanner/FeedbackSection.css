@@ -1,0 +1,125 @@
+.testimonials-section {
+    padding: 100px 0 80px 0;
+    background-color: var(--bg-white);
+}
+
+.testimonials-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem auto;
+}
+
+.testimonials-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1e1b4b;
+    /* Deep indigo color */
+    letter-spacing: -1.2px;
+    margin-bottom: 1.2rem;
+}
+
+.testimonials-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+/* 3-Column Layout */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Card design mimicking the deep violet/slate card background in image */
+.testimonial-card {
+    background-color: #434464;
+    /* Soft slate-indigo background */
+    border-radius: 24px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Profile Row Styling */
+.testimonial-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.testimonial-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.testimonial-role {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    /* Soft gray text */
+}
+
+/* Quote Text */
+.testimonial-quote {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #f1f5f9;
+    /* Light white text */
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    flex-grow: 1;
+}
+
+/* Stars */
+.testimonial-stars {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.star-icon {
+    color: #ffffff;
+    /* White stars like the image */
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .testimonials-title {
+        font-size: 2.3rem;
+    }
+}

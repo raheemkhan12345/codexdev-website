@@ -1,0 +1,243 @@
+/* src/features/hero/Hero.css */
+
+.hero-section {
+    padding: 40px 2rem 80px;
+    background: radial-gradient(circle at 85% 15%, rgba(235, 238, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%);
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 5rem;
+    /* Space between main hero and bottom stats */
+}
+
+/* Left Column content alignment */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Badge Styling */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: var(--badge-bg);
+    color: var(--badge-text);
+    padding: 0.55rem 1.1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    letter-spacing: -0.2px;
+}
+
+.badge-icon {
+    font-size: 0.9rem;
+}
+
+/* Figma Heading (Bold & Crisp) */
+.hero-title {
+    font-size: 4.2rem;
+    font-weight: 800;
+    line-height: 1.12;
+    color: var(--text-dark);
+    letter-spacing: -2px;
+    margin-bottom: 1.8rem;
+}
+
+/* Paragraph styling */
+.hero-desc {
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    max-width: 92%;
+}
+
+/* Button Container gap */
+.hero-actions {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+/* Button Custom Styles update for exact figma borders */
+.btn-secondary {
+    border: 1.5px solid var(--border-color) !important;
+}
+
+/* Right Visual Frame (Smooth Curved Card) */
+.hero-visual {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.visual-card-wrapper {
+    background: #fff;
+    border-radius: 28px;
+    padding: 12px;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    width: 100%;
+    max-width: 520px;
+}
+
+.visual-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+}
+
+/* === STATS SECTION STYLING === */
+.hero-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: start;
+    gap: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    /* Soft top border boundary */
+    padding-top: 3rem;
+}
+
+.stat-item {
+    padding: 0 3.5rem;
+    border-right: 2px solid var(--border-color);
+    /* Verticle dividers like in Figma */
+}
+
+/* Remove border from last stat item */
+.stat-item:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+/* Remove left padding from first stat item so it aligns left perfectly */
+.stat-item:first-child {
+    padding-left: 0;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+    text-transform: uppercase;
+}
+
+/* Responsive Viewports */
+@media (max-width: 1199px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .stat-item {
+        padding: 0 2rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 140px 0 80px 0;
+    }
+
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .hero-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-desc {
+        max-width: 100%;
+    }
+
+    .hero-actions {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-visual {
+        justify-content: center;
+    }
+
+    /* Stats responsive adjustment */
+    .hero-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 2rem 0;
+        padding-top: 2rem;
+    }
+
+    .stat-item {
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        padding: 0;
+    }
+
+    .stat-item:nth-child(odd) {
+        border-right: 1px solid var(--border-color);
+        /* Creates 2x2 split grid look on tablet */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.5rem;
+        letter-spacing: -1.2px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-stats-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stat-item:nth-child(odd) {
+        border-right: none;
+    }
+
+    .stat-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        padding-bottom: 1rem;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}

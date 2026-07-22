@@ -1,0 +1,23 @@
+/* src/assets/styles/variables.css */
+:root {
+    /* Colors */
+    --primary-color: #2b305c;
+    /* Deep Elegant Navy */
+    --text-dark: #1e2243;
+    /* Dark Title Color */
+    --text-light: #5e6484;
+    /* Soft Grayish Blue for body text */
+    --bg-light: #f8fafc;
+    /* Off-white background */
+    --bg-white: #f3f5fc;
+    --border-color: #b5b5b5;
+    /* Gray border for secondary button */
+
+    /* Badges */
+    --badge-bg: #9a9ec6;
+    --badge-text: #575967;
+
+    /* Font & Transition */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --transition-fast: 0.25s ease-in-out;
+}

@@ -1,0 +1,206 @@
+/* src/features/technologies/TechStack.css */
+
+.tech-stack-section {
+    background-color: #ffffff;
+    /* Fresh crisp white background matching layout image */
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tech-stack-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ================= HEADER STYLING ================= */
+.tech-stack-header {
+    text-align: left;
+    /* Aligned left exactly like the screen mockup */
+    margin-bottom: 4.5rem;
+}
+
+.stack-main-title {
+    color: #0f172a;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    margin: 0 0 1rem 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.stack-main-subtitle {
+    color: #64748b;
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* ================= CATEGORIES & ROWS STYLING ================= */
+.stack-categories-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    /* Spacing between rows */
+}
+
+.stack-row-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stack-category-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* Soft dark line indicator on the left side of category headings */
+.category-line-indicator {
+    width: 24px;
+    height: 3px;
+    background-color: #4c4b7b;
+    /* Themed purple horizontal accent bar */
+    border-radius: 10px;
+}
+
+.stack-category-label {
+    color: #1e293b;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* ================= CARDS GRID STYLING ================= */
+.stack-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 identical cards per category group */
+    gap: 1.5rem;
+    max-width: 900px;
+    /* Restricts maximum stretch to perfectly match mockup proportions */
+}
+
+.stack-tool-card {
+    background-color: #f6f5f9;
+    /* Soft minimalist tinted background from layout image */
+    border-radius: 16px;
+    padding: 2.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.005);
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.stack-tool-card:hover {
+    transform: translateY(-4px);
+    background-color: #ffffff;
+    box-shadow: 0 12px 30px rgba(76, 75, 123, 0.06);
+}
+
+.tool-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.stack-icon {
+    font-size: 2rem;
+    /* Clean professional scaling */
+}
+
+.tool-name-label {
+    color: #334155;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* ================= BRANDING COLORS INTEGRATION ================= */
+/* Subtly colored tech icons matching design requirements */
+.icon-react {
+    color: #0087b7;
+}
+
+.icon-next {
+    color: #000000;
+}
+
+.icon-ts {
+    color: #007acc;
+}
+
+.icon-tailwind {
+    color: #06b6d4;
+}
+
+.icon-node {
+    color: #22c55e;
+}
+
+.icon-nest {
+    color: #e0234e;
+}
+
+.icon-dotnet {
+    color: #512bd4;
+}
+
+.icon-spring {
+    color: #6db33f;
+}
+
+.icon-aws {
+    color: #ff9900;
+}
+
+.icon-docker {
+    color: #2496ed;
+}
+
+.icon-k8s {
+    color: #326ce5;
+}
+
+.icon-terraform {
+    color: #844fba;
+}
+
+/* ================= RESPONSIVE LAYOUT ================= */
+@media (max-width: 1024px) {
+    .stack-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 cards on medium viewport screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .stack-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards structure for tablets */
+    }
+
+    .stack-main-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stack-cards-grid {
+        grid-template-columns: 1fr;
+        /* 1 column grid matrix stack on small screens */
+    }
+
+    .stack-tool-card {
+        padding: 1.8rem 1.2rem;
+    }
+}

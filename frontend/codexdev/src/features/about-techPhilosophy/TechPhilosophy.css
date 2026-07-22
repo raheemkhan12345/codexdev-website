@@ -1,0 +1,137 @@
+.tech-philosophy-section {
+    background-color: #f7f6f9;
+    /* Matching soft backdrop theme */
+    padding: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.philosophy-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    /* Cards Left, Description Right */
+    gap: 5rem;
+    align-items: center;
+}
+
+/* ================= LEFT CARDS STACK ================= */
+.philosophy-cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.philosophy-card {
+    position: relative;
+    background-color: #eeedf3;
+    /* Soft light gray card background from mockup */
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.philosophy-card:hover {
+    transform: translateX(6px);
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(85, 84, 126, 0.08);
+}
+
+/* Left Accent Indicator Line */
+.card-left-border {
+    width: 5px;
+    background-color: #4c4b7b;
+    /* Deep theme purple accent bar on left */
+    height: 100%;
+    display: block;
+    flex-shrink: 0;
+}
+
+.philosophy-card-inner {
+    padding: 1.8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.philosophy-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.philosophy-icon {
+    font-size: 1.2rem;
+    color: #4c4b7b;
+}
+
+.card-title {
+    color: #0f172a;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.card-description {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ================= RIGHT CONTENT ================= */
+.philosophy-content-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.philosophy-title {
+    color: #0f172a;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    margin: 0 0 1.5rem 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.philosophy-text {
+    color: #64748b;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 1024px) {
+    .philosophy-container {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+
+    /* Reverse order on mobile so heading comes first */
+    .philosophy-content-block {
+        order: -1;
+    }
+
+    .philosophy-title {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .philosophy-card-inner {
+        padding: 1.4rem 1.2rem;
+    }
+
+    .philosophy-title {
+        font-size: 2rem;
+    }
+}
