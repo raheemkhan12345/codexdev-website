@@ -27,7 +27,7 @@
 /* Secondary Button */
 .btn-secondary {
     background: #838080;
-    color: #6b7280 !important;   /* Gray Text */
+    color: #3e3e3e !important;   /* Gray Text */
     border: 1.5px solid #d1d5db !important;
     transition: all 0.3s ease;
          box-shadow: 0 10px 20px rgba(138, 138, 139, 0.25);
