@@ -1,188 +1,546 @@
-
-
-
-body {
-    font-family: 'Inter', sans-serif;
-    /* Modern, clean font */
-    background-color: var(--bg-color);
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
 .map-page-container {
+
     width: 100%;
     max-width: 1200px;
-    padding: 40px;
+
+    margin: auto;
+
+    padding: 60px 2rem;
+
     box-sizing: border-box;
+
 }
+
+
+
+/* Heading Section */
 
 .text-section {
+
     text-align: center;
+
     margin-bottom: 50px;
+
 }
+
 
 .main-title {
-    font-size: 42px;
+
+    font-size: clamp(2rem, 5vw, 2.6rem);
+
     font-weight: 700;
-    color: var(--primary-color);
-    border-bottom: 3px solid var(--primary-color);
+
+    color: #1e293b;
+
+    border-bottom: 3px solid #1e293b;
+
     display: inline-block;
-    padding-bottom: 10px;
+
+    padding-bottom: 8px;
+
     margin-bottom: 15px;
+
 }
+
+
 
 .subtitle {
-    font-size: 18px;
-    color: #666;
-    text-decoration: underline;
-    text-decoration-color: rgba(102, 102, 102, 0.5);
-    text-underline-offset: 4px;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: clamp(.95rem, 2vw, 1.1rem);
+
+    line-height: 1.6;
+
+    color: #64748b;
+
 }
+
+
+
+/* Card */
+
 
 .contact-card-frame {
-    border-radius: 20px;
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
+
+    padding: 0;
+
 }
+
+
 
 .contact-card {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+
     padding: 40px;
-    color: var(--text-dark);
+
 }
+
+
+
+/* Header */
+
 
 .header-info {
+
     margin-bottom: 30px;
+
 }
+
 
 .breadcrumb {
-    font-size: 14px;
+
+    font-size: .85rem;
+
     color: #888;
-    display: block;
+
     margin-bottom: 10px;
+
+    display: block;
+
 }
+
+
 
 .header-info h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--primary-color);
+
+    font-size: clamp(1.5rem, 4vw, 2rem);
+
+    line-height: 1.3;
+
+    color: #1e293b;
+
 }
+
+
+
+
+
+/* Map */
+
 
 .map-display {
+
+
     width: 100%;
+
     height: 450px;
-    /* Adjust as needed */
-    background: url('../../assets/images/globalHubs-map.jpg') no-repeat center center;
+
+
+    background: url('../../assets/images/globalHubs-map.jpg') no-repeat center;
+
+
     background-size: cover;
-    border-radius: 10px;
+
+
+    border-radius: 14px;
+
+
     position: relative;
-    margin-bottom: 40px;
+
     overflow: hidden;
+
+    margin-bottom: 40px;
+
+
 }
+
+
 
 .map-placeholder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     width: 100%;
+
     height: 100%;
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 18px;
+
     position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: rgba(255, 255, 255, .4);
+
 }
+
+
+
+
+
+/* Location Points */
+
 
 .location-dot {
+
+
     position: absolute;
+
     width: 12px;
+
     height: 12px;
+
     border-radius: 50%;
+
     cursor: pointer;
+
+
 }
+
+
 
 .dot-ripple {
-    position: absolute;
+
     width: 100%;
+
     height: 100%;
+
     border-radius: 50%;
-    background-color: #8dbfff;
-    /* Light blue ripple */
+
+    background: #8dbfff;
+
     animation: ripple 1.5s infinite;
-    opacity: 0.7;
+
 }
+
+
 
 @keyframes ripple {
-    0% {
+
+
+    from {
+
         transform: scale(1);
-        opacity: 0.7;
+
+        opacity: .7;
+
     }
 
-    100% {
+
+    to {
+
         transform: scale(2.5);
+
         opacity: 0;
+
     }
+
+
 }
+
+
+
+
 
 .dot-label {
+
+
     position: absolute;
+
     top: 100%;
+
     left: 50%;
+
     transform: translateX(-50%) translateY(10px);
-    background-color: rgba(255, 255, 255, 0.9);
-    color: var(--primary-color);
-    padding: 4px 10px;
+
+    background: white;
+
+    color: #1e293b;
+
+    padding: 5px 10px;
+
     border-radius: 6px;
-    font-size: 12px;
-    font-weight: 600;
+
+    font-size: .75rem;
+
     white-space: nowrap;
-    pointer-events: none;
+
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    transition: .3s;
+
 }
+
+
 
 .location-dot:hover .dot-label {
+
+
     opacity: 1;
-    transform: translateX(-50%) translateY(5px);
+
 }
+
+
+
+
+
+/* Location Summary */
+
 
 .locations-summary {
+
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr) auto;
+
     gap: 20px;
+
     align-items: center;
+
     border-top: 1px solid #eee;
+
     padding-top: 30px;
+
+
 }
+
+
 
 .hub-info-block h3 {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--primary-color);
+
+
+    font-size: 1.1rem;
+
+    color: #1e293b;
+
     margin-bottom: 5px;
+
 }
+
+
 
 .hub-info-block p {
-    font-size: 14px;
-    color: #666;
+
+
+    font-size: .9rem;
+
+    color: #64748b;
+
 }
+
+
+
 
 .schedule-btn {
-    background-color: var(--primary-color);
-    color: #ffffff;
+
+
+    background: #1e293b;
+
+    color: white;
+
     border: none;
+
+
     padding: 14px 28px;
-    font-size: 16px;
+
+    border-radius: 10px;
+
+    font-size: 1rem;
+
     font-weight: 600;
-    border-radius: 8px;
+
     cursor: pointer;
-    transition: background-color 0.3s ease;
+
+    transition: .3s;
+
+
 }
 
+
+
 .schedule-btn:hover {
-    background-color: #050a11;
+
+    background: #050a11;
+
+}
+
+
+
+
+
+/* =========================
+        TABLET
+========================= */
+
+
+@media(max-width:1000px) {
+
+
+    .contact-card {
+
+        padding: 30px;
+
+    }
+
+
+    .map-display {
+
+        height: 380px;
+
+    }
+
+
+    .locations-summary {
+
+
+        grid-template-columns: repeat(2, 1fr);
+
+
+    }
+
+
+    .schedule-btn {
+
+        width: 100%;
+
+    }
+
+
+}
+
+
+
+
+
+/* =========================
+        MOBILE
+========================= */
+
+
+@media(max-width:600px) {
+
+
+    .map-page-container {
+
+
+        padding: 40px 1rem;
+
+    }
+
+
+
+    .text-section {
+
+        margin-bottom: 35px;
+
+    }
+
+
+
+    .contact-card {
+
+
+        padding: 20px;
+
+        border-radius: 16px;
+
+
+    }
+
+
+
+    .header-info h2 {
+
+
+        font-size: 1.35rem;
+
+
+    }
+
+
+
+    .map-display {
+
+
+        height: 260px;
+
+        margin-bottom: 30px;
+
+
+    }
+
+
+
+    .map-placeholder {
+
+
+        font-size: .8rem;
+
+    }
+
+
+
+    .locations-summary {
+
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+
+    }
+
+
+
+    .schedule-btn {
+
+
+        padding: 12px;
+
+        width: 100%;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+/* =========================
+      SMALL MOBILE
+========================= */
+
+
+@media(max-width:360px) {
+
+
+    .contact-card {
+
+
+        padding: 15px;
+
+    }
+
+
+
+    .map-display {
+
+        height: 220px;
+
+    }
+
+
+
+    .breadcrumb {
+
+        font-size: .75rem;
+
+    }
+
+
+
 }
