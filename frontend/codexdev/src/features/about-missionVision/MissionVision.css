@@ -1,93 +1,197 @@
 .mission-vision-section {
-    background-color: #e2e1e8;
-    /* Soft subtle gray backdrop matching image screenshot */
-    padding: 80px 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    background-color: #e2e1e8;
+    padding: clamp(50px, 8vw, 80px) 0;
 }
+
 
 .mission-vision-container {
-    max-width: 1280px;
     width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 clamp(1rem, 4vw, 2rem);
 }
 
-/* ================= 3-COLUMN GRID ================= */
 .pillars-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
 }
 
+
 .pillar-card {
+
     background-color: #f7f6f9;
-    /* Soft off-white light card background */
+
     border-radius: 20px;
-    padding: 3rem 2.2rem;
+
+    padding: clamp(1.8rem, 4vw, 3rem);
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* Aligned left as seen in the design mockup */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.02);
+
+    border: 1px solid rgba(0, 0, 0, 0.03);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+    min-height: 260px;
 }
+
 
 .pillar-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04);
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
 }
 
-/* ================= ICON & TEXT STYLING ================= */
 .pillar-icon-box {
-    margin-bottom: 1.8rem;
+
+    width: 55px;
+    height: 55px;
+
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    border-radius: 14px;
+
+    background: rgba(76, 75, 123, .08);
+
+    margin-bottom: 1.5rem;
+
 }
+
 
 .pillar-icon {
-    font-size: 2rem;
+
+    font-size: 1.8rem;
+
     color: #4c4b7b;
-    /* Accent purple theme tint matching icons */
+
 }
+
 
 .pillar-title {
+
     color: #0f172a;
-    font-size: 1.75rem;
+
+    font-size: clamp(1.3rem, 3vw, 1.75rem);
+
     font-weight: 700;
-    margin: 0 0 1rem 0;
-    letter-spacing: -0.5px;
+
+    margin: 0 0 1rem;
+
+    letter-spacing: -.5px;
+
     font-family: system-ui, -apple-system, sans-serif;
+
 }
+
+
 
 .pillar-description {
+
     color: #64748b;
-    font-size: 1rem;
-    line-height: 1.6;
+
+    font-size: clamp(.9rem, 2vw, 1rem);
+
+    line-height: 1.7;
+
     margin: 0;
+
 }
 
-/* ================= RESPONSIVE LAYOUT ================= */
-@media (max-width: 1024px) {
+
+@media(max-width:1100px) {
+
+
     .pillars-grid {
+
         grid-template-columns: repeat(2, 1fr);
+
     }
+
+
 }
 
-@media (max-width: 640px) {
+
+@media(max-width:768px) {
+
+
     .pillars-grid {
-        grid-template-columns: 1fr;
-        /* Single column stack on mobile screens */
+
         gap: 1.5rem;
+
+    }
+
+
+
+    .pillar-card {
+
+        min-height: auto;
+
+    }
+
+
+}
+
+
+@media(max-width:600px) {
+
+
+    .pillars-grid {
+
+        grid-template-columns: 1fr;
+
     }
 
     .pillar-card {
-        padding: 2.2rem 1.8rem;
+
+        border-radius: 16px;
+
+        padding: 1.8rem 1.5rem;
+
     }
 
-    .pillar-title {
-        font-size: 1.5rem;
+    .pillar-icon-box {
+
+        width: 45px;
+
+        height: 45px;
+
+        margin-bottom: 1rem;
+
     }
+
+    .pillar-icon {
+
+        font-size: 1.5rem;
+
+    }
+
+
+}
+
+@media(max-width:360px) {
+
+
+    .pillar-title {
+
+        font-size: 1.2rem;
+
+    }
+
+
+    .pillar-description {
+
+        font-size: .85rem;
+
+    }
+
+
 }

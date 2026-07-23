@@ -17,6 +17,9 @@
     --badge-bg: #9a9ec6;
     --badge-text: #575967;
 
+    /* Navbar Height */
+     --navbar-height:90px;
+
     /* Font & Transition */
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --transition-fast: 0.25s ease-in-out;

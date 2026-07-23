@@ -3,7 +3,7 @@
 .core-values-section {
   width: 100%;
   background-color: #5d6185; /* Slate purple banner color matching screenshot */
-  padding: 80px 2rem;
+  padding: 40px 0rem 80px;
   display: flex;
   justify-content: center;
   box-sizing: border-box;

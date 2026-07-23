@@ -1,139 +1,349 @@
-/* src/components/ContactCards.css */
-
 .contact-cards-section {
+
     width: 100%;
     background-color: #f8f9fa;
-    /* Light clean off-white background */
     padding: 80px 0;
-    display: flex;
-    justify-content: center;
+
 }
+
 
 .contact-cards-container {
+
     max-width: 1280px;
     width: 100%;
+    margin: auto;
+
     padding: 0 2rem;
+
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 1.5rem;
+
 }
 
-/* Individual Card */
+
+
+/* Card */
+
 .contact-card {
-    background-color: #ffffff;
+
+    background: white;
+
     border: 1px solid #e2e8f0;
+
     border-radius: 20px;
+
     padding: 2.2rem 1.8rem;
+
+    min-height: 330px;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: flex-start;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+
+    transition: .3s ease;
+
 }
+
+
 
 .contact-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.06);
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .07);
+
     border-color: #cbd5e1;
+
 }
 
-/* Icon Badge Box */
+
+
+/* Icon */
+
+
 .card-icon-wrapper {
+
     width: 48px;
     height: 48px;
-    background-color: #f1f3f9;
-    /* Light purple-gray badge tint */
+
     border-radius: 12px;
+
+    background: #f1f3f9;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     color: #4c4b7b;
-    /* Accent Icon color */
+
     font-size: 1.1rem;
+
     margin-bottom: 1.8rem;
+
 }
 
-/* Title & Description */
+
+
+
+/* Title */
+
+
 .card-title {
-    font-size: 1.25rem;
+
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+
     font-weight: 700;
+
     color: #1e293b;
-    margin: 0 0 0.5rem 0;
+
+    margin: 0 0 .6rem;
+
+    padding-bottom: 3px;
+
     border-bottom: 1px solid #1e293b;
-    /* Title Underline */
-    padding-bottom: 2px;
-    display: inline-block;
-    font-family: system-ui, -apple-system, sans-serif;
+
 }
+
+
+
+/* Description */
+
 
 .card-description {
-    font-size: 0.9rem;
+
+    font-size: .9rem;
+
+    line-height: 1.6;
+
     color: #64748b;
-    line-height: 1.5;
-    margin: 0 0 1.8rem 0;
-    border-bottom: 1px solid #64748b;
-    /* Description Underline */
+
+    margin: 0 0 1.5rem;
+
     padding-bottom: 4px;
-    font-family: system-ui, -apple-system, sans-serif;
+
+    border-bottom: 1px solid #64748b;
+
 }
 
-/* Detail Info Text */
+
+
+/* Detail */
+
+
 .card-detail {
-    font-size: 0.95rem;
+
+    font-size: .95rem;
+
     color: #475569;
+
     font-weight: 500;
-    margin-bottom: 2rem;
+
     margin-top: auto;
-    /* Pushes action link to bottom */
-    font-family: system-ui, -apple-system, sans-serif;
+
+    margin-bottom: 1.8rem;
+
+    word-break: break-word;
+
 }
 
-/* Action Link with Arrow */
+
+
+/* Link */
+
+
 .card-action-link {
+
     display: inline-flex;
+
     align-items: center;
-    gap: 0.5rem;
+
+    gap: .5rem;
+
     color: #4c4b7b;
+
     text-decoration: none;
-    font-size: 0.9rem;
+
+    font-size: .9rem;
+
     font-weight: 600;
-    transition: gap 0.2s ease, color 0.2s ease;
-    font-family: system-ui, -apple-system, sans-serif;
+
+    transition: .3s ease;
+
 }
+
 
 .card-action-link span {
+
     border-bottom: 1px solid #4c4b7b;
-    padding-bottom: 1px;
+
 }
+
+
 
 .arrow-icon {
-    font-size: 0.8rem;
-    transition: transform 0.2s ease;
+
+    font-size: .8rem;
+
+    transition: .3s ease;
+
 }
+
+
 
 .card-action-link:hover {
+
     color: #1e1b4b;
-    gap: 0.75rem;
+
 }
+
+
 
 .card-action-link:hover .arrow-icon {
-    transform: translateX(2px);
+
+    transform: translateX(5px);
+
 }
 
-/* ================= RESPONSIVE LAYOUT ================= */
-@media (max-width: 1024px) {
+
+
+
+
+/* ===========================
+        LARGE LAPTOP
+=========================== */
+
+@media(max-width:1200px) {
+
+
     .contact-cards-container {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+
+
+/* ===========================
+          TABLET
+=========================== */
+
+
+@media(max-width:900px) {
+
+
+    .contact-cards-container {
+
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+
+        padding: 0 1.5rem;
+
     }
+
+
 }
 
-@media (max-width: 640px) {
-    .contact-cards-container {
-        grid-template-columns: 1fr;
-    }
+
+
+/* ===========================
+          MOBILE
+=========================== */
+
+
+@media(max-width:600px) {
+
 
     .contact-cards-section {
+
         padding: 50px 0;
+
     }
+
+
+
+    .contact-cards-container {
+
+        grid-template-columns: 1fr;
+
+        padding: 0 1rem;
+
+        gap: 1.2rem;
+
+    }
+
+
+
+    .contact-card {
+
+        padding: 1.8rem 1.4rem;
+
+        min-height: auto;
+
+    }
+
+
+
+    .card-icon-wrapper {
+
+        width: 44px;
+
+        height: 44px;
+
+        margin-bottom: 1.3rem;
+
+    }
+
+
+
+    .card-description {
+
+        font-size: .85rem;
+
+    }
+
+
+}
+
+
+
+/* ===========================
+        SMALL MOBILE
+=========================== */
+
+
+@media(max-width:360px) {
+
+
+    .contact-card {
+
+        padding: 1.5rem 1.2rem;
+
+        border-radius: 16px;
+
+    }
+
+
+
+    .card-title {
+
+        font-size: 1.05rem;
+
+    }
+
+
+    .card-detail {
+
+        font-size: .85rem;
+
+    }
+
+
 }

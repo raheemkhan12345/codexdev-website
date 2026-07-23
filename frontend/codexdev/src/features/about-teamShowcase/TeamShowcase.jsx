@@ -65,7 +65,7 @@ const TeamShowcase = () => {
                         {categories.map((category) => (
                             <button
                                 key={category}
-                                className={`filter-btn ${activeTab === category ? 'active' : ''}`}
+                                className={`filter-button ${activeTab === category ? 'active' : ''}`}
                                 onClick={() => setActiveTab(category)}
                             >
                                 {category}

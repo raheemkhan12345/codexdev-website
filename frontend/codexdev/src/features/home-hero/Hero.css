@@ -1,7 +1,7 @@
 /* src/features/hero/Hero.css */
 
 .hero-section {
-    padding: 40px 2rem 80px;
+    padding: 10px 0rem 80px;
     background: radial-gradient(circle at 85% 15%, rgba(235, 238, 255, 0.6) 0%, rgba(255, 255, 255, 0) 60%);
     overflow: hidden;
 }
