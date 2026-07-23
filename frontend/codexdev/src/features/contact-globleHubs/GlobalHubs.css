@@ -11,10 +11,6 @@
 
 }
 
-
-
-/* Heading Section */
-
 .text-section {
 
     text-align: center;
@@ -59,10 +55,6 @@
 }
 
 
-
-/* Card */
-
-
 .contact-card-frame {
 
     padding: 0;
@@ -83,11 +75,6 @@
     padding: 40px;
 
 }
-
-
-
-/* Header */
-
 
 .header-info {
 
@@ -121,12 +108,6 @@
 }
 
 
-
-
-
-/* Map */
-
-
 .map-display {
 
 
@@ -154,7 +135,6 @@
 }
 
 
-
 .map-placeholder {
 
     width: 100%;
@@ -172,13 +152,6 @@
     color: rgba(255, 255, 255, .4);
 
 }
-
-
-
-
-
-/* Location Points */
-
 
 .location-dot {
 
@@ -238,9 +211,6 @@
 }
 
 
-
-
-
 .dot-label {
 
 
@@ -280,12 +250,6 @@
 }
 
 
-
-
-
-/* Location Summary */
-
-
 .locations-summary {
 
 
@@ -304,8 +268,6 @@
 
 }
 
-
-
 .hub-info-block h3 {
 
 
@@ -317,8 +279,6 @@
 
 }
 
-
-
 .hub-info-block p {
 
 
@@ -327,9 +287,6 @@
     color: #64748b;
 
 }
-
-
-
 
 .schedule-btn {
 
@@ -363,14 +320,6 @@
     background: #050a11;
 
 }
-
-
-
-
-
-/* =========================
-        TABLET
-========================= */
 
 
 @media(max-width:1000px) {
@@ -407,15 +356,6 @@
 
 
 }
-
-
-
-
-
-/* =========================
-        MOBILE
-========================= */
-
 
 @media(max-width:600px) {
 
@@ -505,15 +445,6 @@
 
 
 }
-
-
-
-
-
-/* =========================
-      SMALL MOBILE
-========================= */
-
 
 @media(max-width:360px) {
 
