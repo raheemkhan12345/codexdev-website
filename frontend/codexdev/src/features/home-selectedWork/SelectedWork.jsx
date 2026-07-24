@@ -5,12 +5,12 @@ import Container from '../../components/common/Container/Container';
 import './SelectedWork.css';
 
 // Project Images Imports (Aap apne actual assets folder mein images rakh kar import kar sakte hain)
-import project1 from '../../assets/images/project1.jpg';
-import project2 from '../../assets/images/project2.jpg';
-import project3 from '../../assets/images/project3.jpg';
-import project4 from '../../assets/images/project4.jpg';
-import project5 from '../../assets/images/project5.jpg';
-import project6 from '../../assets/images/project6.jpg';
+import project1 from '../../assets/images/home-project1.png';
+import project2 from '../../assets/images/home-project2.png';
+import project3 from '../../assets/images/home-project3.png';
+import project4 from '../../assets/images/home-project4.png';
+import project5 from '../../assets/images/home-project5.png';
+import project6 from '../../assets/images/home-project6.png';
 
 const SelectedWork = () => {
     const projects = [

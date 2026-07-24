@@ -2,7 +2,7 @@ import React from 'react';
 import './AboutHero.css';
 import { Link } from 'react-router-dom';
 
-import aboutImage1 from '../../assets/images/aboutPage-image1.jpg';
+import aboutImage1 from '../../assets/images/aboutPage-image1.png';
 const AboutHero = () => {
     const stats = [
         { value: "150+", label: "PROJECTS DELIVERED" },

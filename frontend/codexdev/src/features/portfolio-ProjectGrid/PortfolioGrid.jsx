@@ -6,11 +6,11 @@ import Container from '../../components/common/Container/Container';
 import './PortfolioGrid.css';
 
 // Project Images
-import p1_neo from '../../assets/images/portfolio-project1.jpg';
+import p1_neo from '../../assets/images/portfolio-project1.png';
 import p2_city from '../../assets/images/portfolio-project2.jpg';
-import p3_chronos from '../../assets/images/portfolio-project3.jpg';
-import p4_vanguard from '../../assets/images/portfolio-project4.jpg';
-import p5_vitalis from '../../assets/images/portfolio-project5.jpg';
+import p3_chronos from '../../assets/images/portfolio-project3.png';
+import p4_vanguard from '../../assets/images/portfolio-project4.png';
+import p5_vitalis from '../../assets/images/portfolio-project5.png';
 
 const categories = [
     { id: 'all', label: 'All Projects' },

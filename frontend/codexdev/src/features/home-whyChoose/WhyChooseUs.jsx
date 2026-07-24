@@ -7,7 +7,7 @@ import './WhyChooseUs.css'; // Same folder se import
 import { FaUsers, FaSyncAlt, FaShieldAlt, FaBolt } from 'react-icons/fa';
 
 // Workspace Image Import
-import workspaceImg from '../../assets/images/workspace.jpg'; // Ensure the path is correct
+import workspaceImg from '../../assets/images/home-workspace.png'; // Ensure the path is correct
 
 const WhyChooseUs = () => {
     const points = [

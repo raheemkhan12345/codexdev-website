@@ -7,7 +7,7 @@ import Container from '../../components/common/Container/Container';
 import './Hero.css';
 
 // Mockup Image Import (Aap apne actual assets folder mein curved-monitor screen image rakh sakte hain)
-import featuredimage1 from '../../assets/images/portfolio-hero.jpg';
+import featuredimage1 from '../../assets/images/portfolio-hero.png';
 
 const Hero = () => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Careers-hero.css';
-import teamImage from '../../assets/images/careers-team-image.jpg';
+import teamImage from '../../assets/images/careers-team-image.png';
 
 const CareersHero = () => {
     const stats = [

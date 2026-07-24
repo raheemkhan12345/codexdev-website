@@ -1,7 +1,7 @@
 import React from 'react';
 import './SectorExpertise.css';
-import medImg from '../../assets/images/medvantage.jpg';
-import aiImg from '../../assets/images/neuralcore.jpg';
+import medImg from '../../assets/images/technology-medvantage.jpg';
+import aiImg from '../../assets/images/technology-neuralcore.jpg';
 
 const SectorExpertise = () => {
     const projects = [

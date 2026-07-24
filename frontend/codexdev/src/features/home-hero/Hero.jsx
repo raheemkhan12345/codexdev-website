@@ -5,7 +5,7 @@ import Button from '../../components/common/Button/Button';
 import { heroData } from './heroData';
 import './Hero.css';
 
-import dashboardImg from '../../assets/images/hero-dashboard.jpg';
+import dashboardImg from '../../assets/images/hero-dashboard.png';
 import { FaCheck } from 'react-icons/fa';
 
 const Hero = () => {
