@@ -1,6 +1,6 @@
 import React from 'react';
 import './servicesHero.css';
-import image1 from '../../../assets/images/services-images/image1.jpg'
+import image1 from '../../../assets/images/services-images/image1.png'
 
 function ServicesHero() {
   return (

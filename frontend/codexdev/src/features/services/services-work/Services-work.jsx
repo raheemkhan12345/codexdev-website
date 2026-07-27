@@ -1,7 +1,7 @@
 import React from 'react';
-import './Services-Work.css';
+import './Services-work.css';
 
-const steps = [
+const stepsData = [
   {
     number: '01',
     title: 'Discovery & Strategy',
@@ -28,30 +28,33 @@ const steps = [
   },
 ];
 
-function ServicesWork1() {
+const ServicesWork1 = () => {
   return (
-    <section className="methodology-section">
-      {/* Header */}
-      <div className="methodology-header">
-        <span className="methodology-subtitle">OUR METHODOLOGY</span>
-        <h2 className="methodology-title">How We Work</h2>
-        <p className="methodology-description">
-          A rigorous Agile workflow designed for transparency, speed, and uncompromising quality.
-        </p>
-      </div>
+    <section className="how-we-work-section">
+      <div className="services-work-container">
+        {/* Header Section */}
+        <div className="section-header">
+          <span className="subtitle">OUR METHODOLOGY</span>
+          <h2 className="main-title">How We Work</h2>
+          <p className="description">
+            A rigorous Agile workflow designed for transparency, speed, and
+            uncompromising quality.
+          </p>
+        </div>
 
-      {/* Grid Steps */}
-      <div className="steps-grid">
-        {steps.map((step) => (
-          <div key={step.number} className="step-card">
-            <span className="step-number">{step.number}</span>
-            <h3 className="step-title">{step.title}</h3>
-            <p className="step-description">{step.description}</p>
-          </div>
-        ))}
+        {/* Steps Grid */}
+        <div className="steps-grid">
+          {stepsData.map((step) => (
+            <div key={step.number} className="step-card">
+              <span className="step-number">{step.number}</span>
+              <h3 className="step-title">{step.title}</h3>
+              <p className="step-description">{step.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default ServicesWork1;

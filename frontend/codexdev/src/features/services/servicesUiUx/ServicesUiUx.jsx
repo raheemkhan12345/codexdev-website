@@ -3,7 +3,7 @@ import React from 'react';
 import { FaCheckCircle } from 'react-icons/fa'; // Solid checkmark
 import { CgDesignmodo } from 'react-icons/cg'; // A specific modern design icon
 import  './ServicesUiUx.css';
-import serviceMockup from "F:/github Repositories/codexdev-website/frontend/codexdev/src/assets/images/services-images/servicesUiUx-image1.jpg";
+import serviceMockup from "../../../assets/images/services-images/servicesUiUx-image1.png";
 
 
 function ServicesUiUx() {

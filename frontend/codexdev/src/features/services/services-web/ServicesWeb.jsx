@@ -4,7 +4,7 @@ import { FaCheckCircle, FaCode } from 'react-icons/fa';
 import './ServicesWeb.css';
 
 // Replace with your actual image path
-import Servicesimage3 from 'F:/github Repositories/codexdev-website/frontend/codexdev/src/assets/images/services-images/services-image3.jpg';
+import Servicesimage3 from '../../../assets/images/services-images/services-image3.png';
 
 function ServicesWeb() {
   const techStack = ["Next.js", "TypeScript", "Node.js", "PostgreSQL"];
