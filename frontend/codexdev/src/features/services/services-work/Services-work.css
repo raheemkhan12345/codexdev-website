@@ -1,0 +1,93 @@
+/* Main Container */
+.methodology-section {
+  background-color: #ffffff;
+  padding: 80px 24px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header Section */
+.methodology-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 64px auto;
+}
+
+.methodology-subtitle {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #6b7280;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.methodology-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.methodology-description {
+  font-size: 18px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+Steps Grid
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1000px;
+
+}
+
+/* Step Card */
+.step-card {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.step-number {
+  font-size: 56px;
+  font-weight: 300;
+  color: #d1d5db;
+  margin-bottom: 16px;
+  line-height: 1;
+  user-select: none;
+}
+
+.step-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.step-description {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Layout */
+@media (min-width: 640px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .steps-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+  }
+}
