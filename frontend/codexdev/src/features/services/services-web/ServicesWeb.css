@@ -4,7 +4,7 @@
 /* Main Section Wrapper */
 .web-dev-section {
   width: 100%;
-  background-color: #F8F7FC; /* Off-white / light lavendar tint */
+  background-color: #F6F2F6; /* Off-white / light lavendar tint */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +83,7 @@
   color: #64748B;
   line-height: 1.6;
   font-weight: 400;
-  max-width: 48ch; /* Wraps clean in ~2-3 lines */
+  max-width: 36ch; /* Adjust until it becomes 3 lines */
   margin: 0 0 1.75rem 0;
 }
 
