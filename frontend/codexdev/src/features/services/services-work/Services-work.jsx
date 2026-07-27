@@ -43,12 +43,12 @@ const ServicesWork1 = () => {
         </div>
 
         {/* Steps Grid */}
-        <div className="steps-grid">
+        <div className="services-steps-grid">
           {stepsData.map((step) => (
-            <div key={step.number} className="step-card">
-              <span className="step-number">{step.number}</span>
-              <h3 className="step-title">{step.title}</h3>
-              <p className="step-description">{step.description}</p>
+            <div key={step.number} className="services-step-card">
+              <span className="services-step-number">{step.number}</span>
+              <h3 className="services-step-title">{step.title}</h3>
+              <p className="services-step-description">{step.description}</p>
             </div>
           ))}
         </div>

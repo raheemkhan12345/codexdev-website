@@ -116,7 +116,7 @@
 }
 
 /* Number styles (e.g. "01") */
-.step-number {
+.process-step-number {
     color: var(--text-light);
     font-weight: 500;
     opacity: 0.7;

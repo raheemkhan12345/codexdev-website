@@ -63,7 +63,7 @@ const Process = () => {
                                 {/* Step Info */}
                                 <div className="process-info">
                                     <h3 className="process-step-title">
-                                        <span className="step-number">{step.number}</span>
+                                        <span className="process-step-number">{step.number}</span>
                                         {step.title}
                                     </h3>
                                     <p className="process-step-desc">{step.description}</p>

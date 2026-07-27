@@ -35,7 +35,7 @@
   line-height: 1.2;
 }
 
-.description {
+.services-description {
   margin: 22px auto 0;
   max-width: 600px;
   font-size: 18px;
@@ -44,33 +44,33 @@
 }
 
 
-.steps-grid {
+.services-steps-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(220px, 280px));
   justify-content: center;
   gap: 60px;
 }
 
-.step-card {
+.services-step-card {
   width: 100%;
 }
 
-.step-number {
+.services-step-number {
   font-size: 54px;
-  font-weight: 700;
+  font-weight: 500;
   color: #d7d7e2;
   line-height: 1;
   margin-bottom: 18px;
 }
 
-.step-title {
+.services-step-title {
   font-size: 22px;
   font-weight: 700;
   color: #111;
   margin-bottom: 18px;
 }
 
-.step-description {
+.services-step-description {
   font-size: 16px;
   color: #666;
   line-height: 1.8;
@@ -79,7 +79,7 @@
 
 @media (max-width:1280px) {
 
-  .steps-grid {
+  .services-steps-grid {
 
     grid-template-columns: repeat(4, 240px);
 
@@ -87,7 +87,7 @@
 
   }
 
-  .step-card {
+  .services-step-card {
 
     width: 240px;
 
@@ -98,7 +98,7 @@
 
 @media (max-width:992px) {
 
-  .steps-grid {
+  .services-steps-grid {
 
     grid-template-columns: repeat(2, 280px);
 
@@ -125,7 +125,7 @@
 
   }
 
-  .steps-grid {
+  .services-steps-grid {
 
     grid-template-columns: 280px;
 
@@ -135,7 +135,7 @@
 
   }
 
-  .step-card {
+  .services-step-card {
 
     text-align: center;
 
@@ -146,13 +146,13 @@
 
 @media (max-width:400px) {
 
-  .steps-grid {
+  .services-steps-grid {
 
     grid-template-columns: 1fr;
 
   }
 
-  .step-card {
+  .services-step-card {
 
     width: 100%;
 
